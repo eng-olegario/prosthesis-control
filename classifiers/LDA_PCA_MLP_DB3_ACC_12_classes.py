@@ -1,6 +1,6 @@
 # Dataset: DB3
 # Classes: 12
-# Classifier: Random Forest (RF)
+# Classifier: MLP
 # Feature Projection: LDA and PCA
 # Sensors: EMG and ACC
 
