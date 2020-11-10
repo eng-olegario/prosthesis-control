@@ -1,3 +1,9 @@
+# Dataset: DB3
+# Classes: 12
+# Classifier: Random Forest (RF)
+# Sensors: EMG
+
+
 import numpy as np
 import pandas as pd
 from pandas import DataFrame
