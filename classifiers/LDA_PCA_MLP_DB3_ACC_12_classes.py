@@ -71,7 +71,7 @@ def create_model(dropout_rate=0.0, neurons_1 = 200):
     model.add(Dense(num_classes, activation='softmax'))
     #print(model.summary())    
     model.compile(loss='categorical_crossentropy', 
-                  optimizer='nadam', metrics=['accuracy'])
+                  optimizer='adam', metrics=['accuracy'])
     return model
 
 ###################################################### 
@@ -1104,7 +1104,7 @@ clf.add(Flatten())
 clf.add(Dense(num_classes, activation='softmax'))
 #print(model.summary())    
 clf.compile(loss='categorical_crossentropy', 
-              optimizer='nadam', metrics=['accuracy'])
+              optimizer='adam', metrics=['accuracy'])
 
 for z in range(0, 10):
       
