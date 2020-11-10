@@ -1,8 +1,9 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Oct  2 22:59:16 2020
 
-"""
+# Dataset: DB3
+# Classes: 12
+# Classifier: Random Forest (RF)
+# Feature Projection: LDA and PCA
+# Sensors: EMG and ACC
 
 import numpy as np
 import pandas as pd
