@@ -1,3 +1,10 @@
+# Dataset: DB3
+# Classes: 12
+# Classifier: Random Forest (RF)
+# Feature Projection: LDA and PCA
+# Sensors: EMG and ACC
+
+
 import numpy as np
 import pandas as pd
 from pandas import DataFrame
