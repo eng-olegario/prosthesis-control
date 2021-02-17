@@ -177,10 +177,10 @@ def balanco_classes(data):
 #        Plotagem Real versus Predito
 ###################################################### 
 def plotagem(emg, validations, predictions):
-    t = np.linspace(0, 43.5, len(emg[:,0]))
+    t = np.linspace(0, 240, len(emg[:,0]))
     plt.figure(figsize=(10, 8))
     plt.subplot(311)
-    plt.xlim(0, 43.5)
+    plt.xlim(0, 240)
     plt.plot(t, emg[:,0], 'purple', label="Eletrodo 0")
     plt.plot(t, emg[:,1], 'orange', label="Eletrodo 1")
     plt.plot(t, emg[:,2], 'green', label="Eletrodo 2")
@@ -189,7 +189,7 @@ def plotagem(emg, validations, predictions):
     plt.legend()
 
     plt.subplot(312)
-    plt.xlim(0, 43.5)
+    plt.xlim(0, 240)
     plt.plot(t, emg[:,4], 'blue', label="Eletrodo 4")
     plt.plot(t, emg[:,5], 'purple', label="Eletrodo 5")
     plt.plot(t, emg[:,6], 'orange', label="Eletrodo 6")
@@ -199,7 +199,7 @@ def plotagem(emg, validations, predictions):
     plt.legend()
     
     plt.subplot(313)
-    plt.xlim(0, 43.5)
+    plt.xlim(0, 240)
     plt.plot(t, emg[:,8], 'blue', label="Eletrodo 8")
     plt.plot(t, emg[:,9], 'green', label="Eletrodo 9")
     plt.plot(t, emg[:,10], 'purple', label="Eletrodo 10")
@@ -209,8 +209,8 @@ def plotagem(emg, validations, predictions):
     plt.show() 
     
     plt.subplot(311)
-    plt.xlim(0, 43.5)
-    plt.ylim(0, 12)
+    plt.xlim(0, 240)
+    plt.ylim(0, 24)
     t = np.linspace(0, 43.5, len(validations))
     plt.plot(t, validations, 'red', label="Valor real")
     plt.plot(t, predictions, 'blue', label="Valor predito")
