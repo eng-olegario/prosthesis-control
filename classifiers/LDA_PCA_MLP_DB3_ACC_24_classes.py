@@ -211,7 +211,7 @@ def plotagem(emg, validations, predictions):
     plt.subplot(311)
     plt.xlim(0, 240)
     plt.ylim(0, 24)
-    t = np.linspace(0, 43.5, len(validations))
+    t = np.linspace(0, 240, len(validations))
     plt.plot(t, validations, 'red', label="Valor real")
     plt.plot(t, predictions, 'blue', label="Valor predito")
     plt.ylabel('Classes')
