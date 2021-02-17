@@ -18,7 +18,7 @@ STOP  = 600
 #####################################################
 
 # Load .txt file
-mat = np.loadtxt('kidopro\kidopro_S2.txt')
+mat = np.loadtxt('kidopro_S2.txt')
 E1_emg=mat[:,2:10]
 E1_label = mat[:,0]
 E1_rep = mat[:,1]
