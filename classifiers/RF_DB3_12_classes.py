@@ -149,10 +149,10 @@ def balanco_classes(data):
 #        Plotagem Real versus Predito
 ###################################################### 
 def plotagem(emg, validations, predictions):
-    t = np.linspace(0, 43.5, len(emg[:,0]))
+    t = np.linspace(0, 120, len(emg[:,0]))
     plt.figure(figsize=(10, 8))
     plt.subplot(311)
-    plt.xlim(0, 43.5)
+    plt.xlim(0, 120)
     plt.plot(t, emg[:,0], 'purple', label="Eletrodo 0")
     plt.plot(t, emg[:,1], 'orange', label="Eletrodo 1")
     plt.plot(t, emg[:,2], 'green', label="Eletrodo 2")
@@ -161,7 +161,7 @@ def plotagem(emg, validations, predictions):
     plt.legend()
 
     plt.subplot(312)
-    plt.xlim(0, 43.5)
+    plt.xlim(0, 120)
     plt.plot(t, emg[:,4], 'blue', label="Eletrodo 4")
     plt.plot(t, emg[:,5], 'purple', label="Eletrodo 5")
     plt.plot(t, emg[:,6], 'orange', label="Eletrodo 6")
@@ -171,7 +171,7 @@ def plotagem(emg, validations, predictions):
     plt.legend()
     
     plt.subplot(313)
-    plt.xlim(0, 43.5)
+    plt.xlim(0, 120)
     plt.plot(t, emg[:,8], 'blue', label="Eletrodo 8")
     plt.plot(t, emg[:,9], 'green', label="Eletrodo 9")
     plt.plot(t, emg[:,10], 'purple', label="Eletrodo 10")
@@ -1037,14 +1037,12 @@ for z in range(0, 10):
     print('\nMelhor acurácia:', grid.best_score_)
     print('\nMelhores parâmetros:', grid.best_params_)
 
-
 ###################################################### 
 #      Classificador RF - TREINAMENTO E TESTE
 ###################################################### 
     RF_model = RandomForestClassifier(n_estimators = grid.best_params_['n_estimators'], 
                                   max_depth = grid.best_params_['max_depth'], 
                                   max_features = grid.best_params_['max_features'])  
-
       
 # Treina o sistema (repetições 1, 3, 4 e 6)
     RF_model.fit(X_val, Y_val)
