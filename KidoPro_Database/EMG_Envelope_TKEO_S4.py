@@ -9,16 +9,11 @@ from numpy import average, power, absolute, mean, std, diff, where
 import pandas as pd
 from pandas import DataFrame
 from sklearn.preprocessing import StandardScaler
-from sklearn.metrics import accuracy_score
 from scipy import stats
-from scipy.stats import kurtosis
-from scipy.stats import skew
 from scipy.signal import butter, lfilter 
 from scipy import signal
 from scipy.stats import linregress
 import biosignalsnotebooks as bsnb
-import seaborn as sns
-import statsmodels.api as sm
 
 # Sample rate and desired cutoff frequencies (in Hz).
 fs = 1000.0
