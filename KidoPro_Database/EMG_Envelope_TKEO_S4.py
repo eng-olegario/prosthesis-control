@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 """
 Spyder Editor
+Adapted from Biosignalsplux (Event Detection - Muscular Activations (EMG))
+http://biosignalsplux.com/learn/notebooks/Categories/Detect/detect_bursts_rev.html
 """
 
 import matplotlib.pyplot as plt
