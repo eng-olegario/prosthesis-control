@@ -11,9 +11,9 @@ from pandas import DataFrame
 from sklearn.preprocessing import StandardScaler
 from scipy import stats
 from scipy.signal import butter, lfilter 
-from scipy import signal
 from scipy.stats import linregress
 import biosignalsnotebooks as bsnb
+from scipy import signal
 
 # Sample rate and desired cutoff frequencies (in Hz).
 fs = 1000.0
