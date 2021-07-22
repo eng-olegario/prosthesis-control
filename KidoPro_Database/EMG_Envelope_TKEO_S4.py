@@ -74,7 +74,7 @@ a = sensor_range[1]-sensor_range[0]
 b = adc_range[1]
 c = sensor_range[0]
 
-# Converts 0 to 1023 to values ​​from -1.64 to +1.64
+# Converts 0 to 1023 to values from -1.64 to +1.64
 emg_total = a * emg / b + c
 E1_emg = emg_total
 
@@ -127,7 +127,7 @@ for i in range(0, len(EMG_tkeo)):
 rect_signal = absolute(tkeo)
 rect_signal = bsnb.aux_functions._moving_average(rect_signal, sr / 10)        
 
-smoothing_level_perc = 20           # Percentage
+smoothing_level_perc = 20           
 smoothing_level = int((smoothing_level_perc / 100) * sr)
 smooth_signal = []
 for i in range(0, len(rect_signal)):
@@ -189,7 +189,7 @@ EMG_envol=np.abs(EMG_envol)
 
 # Low pass filter 
 b, a = signal.butter(2, 7/(fs/2), btype = 'low')
-rmss = signal.filtfilt(b, a, EMG_envol)                           # envoltória em um canal EMG
+rmss = signal.filtfilt(b, a, EMG_envol)                           
 
 # Generation of a square wave reflecting the activation and inactivation periods.
 media = np.mean(rmss)
